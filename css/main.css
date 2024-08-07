@@ -39,6 +39,7 @@ body{
   font-family: "Poppins", sans-serif;
   */
   font:var(--fz)/var(--lh) "Poppins", sans-serif;
+  color : var(--txt-color);
 }
 
 /* 링크 버튼 */
@@ -46,8 +47,8 @@ body{
 /* HEADER */
 header{ 
   background: 
-  url(../images/header_bg.svg) right top no-repeat,
-  url(../images/header_ellipse.svg) left top no-repeat;
+  url(../images/Header_title_bg.svg) right top no-repeat,
+  url(../images/Header_Ellipse.svg) left top no-repeat;
 }
 .top_nav{
   padding: 47px 0;
@@ -125,4 +126,37 @@ header{
 }
 .top_nav .dropdown ul li:hover{
   color:#5E6282;
+}
+
+header .content{
+  display: flex;
+  justify-content: space-between;
+}
+
+header .content .desc{
+  width: 545px;
+}
+
+header .content .desc h3{
+  font: 20px/30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color : #DF6951;
+  margin-bottom: 24px;
+}
+
+header .content .desc h2{
+  font:84px/89px "Volkhov", serif;
+  font-weight: bold;
+  color : #181E4B;
+  letter-spacing: -0.04em;
+  margin-bottom: 30px;
+}
+
+header .content .desc p{
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  width:477px;
+  margin-bottom: 34px;
 }
