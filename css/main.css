@@ -7,41 +7,122 @@
   font-style: normal;
   font-weight: normal;
   src: local('Product Sans Medium Regular'), url('../fonts/ProductSans-Medium.woff') format('woff');
-  }
-
-/* 
-font-family: "Volkhov", serif;
+}
+/*
 font-family: "Poppins", sans-serif;
+font-family: "Volkhov", serif;
 font-family: "Plus Jakarta Sans", sans-serif;
-font-family: "Montserrat", sans-serif;
 font-family: "Open Sans", sans-serif;
+font-family: "Montserrat", sans-serif;
 */
-
-/*변수*/
+/* 변수 */
 :root{
   --txt-color : #5E6282;
-  --white : white;
-  --container : 1170px;
+  --white:white;
+  --container:1170px;
   --fz:16px;
   --lh:26px;
 }
 
 
-/*레이아웃*/
+/* 레이아웃 */
 .container{
   width: var(--container);
-  margin: 0 auto;
+  margin:0 auto;
 }
 
-/*폰트*/
+/* 폰트 */
 body{
   /*
-  font-size: var(--fz);
+  font-size:var(--fz);
   line-height: var(--lh);
   font-family: "Poppins", sans-serif;
   */
-  font : var(--fz)/var(--lh) "Poppins", sans-serif;
+  font:var(--fz)/var(--lh) "Poppins", sans-serif;
 }
 
+/* 링크 버튼 */
 
-/*링크 버튼*/
+/* HEADER */
+header{ 
+  background: 
+  url(../images/header_bg.svg) right top no-repeat,
+  url(../images/header_ellipse.svg) left top no-repeat;
+}
+.top_nav{
+  padding: 47px 0;
+}
+.top_nav > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top_nav.fixed{
+  position: fixed;
+  padding: 20px 0;
+  top: 0;
+  left: 0; 
+  right: 0;
+  background: rgba(255,255,255,.8);
+  box-shadow: 0 3px 3px rgba(0,0,0,.06);
+}
+.top_nav nav{
+  display: flex;
+  align-items: center;
+}
+.top_nav ul {
+  display: flex;
+}
+.main_menu{
+  gap:60px;
+  margin-right: 86px;
+}
+.login_links{
+  gap: 50px;
+  margin-right: 42px;
+}
+.logo a{
+  width: 116px;
+  height: 35px;
+  background: url(../images/Logo.svg) no-repeat;
+  display: block;
+  text-indent: -9999em;
+}
+.top_nav a{
+  font-family: 'Product Sans Medium Regular';
+  font-size: 17px;
+  color:#212832;
+}
+.login_links a{
+  height: 40px;
+  padding: 0 20px;
+  border:1px solid transparent;
+  display: block;
+  line-height: 40px;
+  border-radius: 5px;  
+  transition:0.3s;
+}
+.login_links a:hover{
+  border-color:#212832;
+}
+.top_nav .dropdown{
+  position: relative;
+}
+.top_nav .dropdown ul{
+  position: absolute;
+  right:0;
+  top: 100%;
+  padding: 5px;
+  border:1px solid #212832;
+  flex-direction: column;
+  border-radius:5px;
+  background: var(--white);
+  display: none;
+}
+.top_nav .dropdown ul li{
+  line-height: 30px;
+  padding: 0 15px;
+}
+.top_nav .dropdown ul li:hover{
+  color:#5E6282;
+}
